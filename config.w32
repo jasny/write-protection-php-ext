@@ -1,0 +1,10 @@
+// $Id$
+// vim:ft=javascript
+
+ARG_ENABLE("skeleton", "enable skeleton", "no");
+
+if (PHP_SKELETON != "no") {
+	EXTENSION("skeleton", "skeleton.c");
+	AC_DEFINE('HAVE_SKELETON', 1 , 'whether skeleton is enabled');
+	PHP_INSTALL_HEADERS("ext/skeleton/", "php_skeleton.h");
+}
