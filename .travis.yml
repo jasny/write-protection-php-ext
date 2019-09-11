@@ -3,8 +3,6 @@ env:
 
 language: php
 php:
-  - 7.2
-  - 7.3
   - 7.4snapshot
   - nightly
 
@@ -16,7 +14,7 @@ branches:
   only:
   - master
   - travis
-  - /^v\d+\.\d+\.\d+$/
+  - /^v\d+\.\d+\.\d+/
 
 install:
   - phpize
@@ -44,7 +42,7 @@ before_deploy:
 deploy:
   provider: releases
   auth_token:
-    secure: <your encrypted token>
+    secure: "67TebgElWPldI2vbDOvZicb+71lKVH5UC318/T6Yx9BebDsM2RukGZOt6YWRkck2D/O8VVtcOEUFqWdjtM+1gi02GxDOVlX+2S4Qqfh0NBM33GenMvvpXh9DgfNkH+C/X4RbONFNIvDf4UFPq1z9qDxxQdW9fnLK9imdKSLyYNDEGLyuEvHb9G2SSsoHQNcxeW6Gqg3KNds4ZRO8Py7dcV2oQvgE97fl/vB5csHuZQEiJAiqiaMYlUNvOromw2a9Mxhmsb0a10EskiEDktnbbRvUPn/dpfCZZulCraw3XoaSgH8ksfRCvPMIRGOVmwdsrlee5Qf3sQkZB+4du+FNahtzP33MLoYbTV+DJaCxZB6/8sBnmbcNVOd0ebZSr5XLs6O2w6V6Wl/O72h2KMP6FobINJrWJnt6SfbuOTXix1ChUv7Loa7tn24Pyr7YOkDipOqV5Jt0SdtjADjPW6lseiIgojU6i8J4Ub8IMaBb4GJAvs++Hi0eDev8FRh0aIRtaP/c4yd8jaLCTDwPfkuMWF/g/6cUhWH4AqwLwHG1sAkk10YPoeUdWMhPR4q6kv/GReHnXCGdy8e4QKlY22hurVsdcmcaOrv9Vo9zrif5AsynhmhwrsCKkG8FI0/P8guPa/qpCRFI4x4NqvYUAIcjlS5P11pDCNmdRBmc9aEurj8="
   file: "$RELEASE_PACKAGE"
   skip_cleanup: true
   name: "$TRAVIS_TAG"

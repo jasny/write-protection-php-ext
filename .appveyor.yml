@@ -10,22 +10,12 @@ environment:
   EXTNAME: write_protection
 
   matrix:
-    - PHP_VERSION: 7.2
+    - PHP_VERSION: 7.4
       VC_VERSION: 15
       BUILD_TYPE: Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
 
-    - PHP_VERSION: 7.2
-      VC_VERSION: 15
-      BUILD_TYPE: nts-Win32
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.3
-      VC_VERSION: 15
-      BUILD_TYPE: Win32
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-
-    - PHP_VERSION: 7.3
+    - PHP_VERSION: 7.4
       VC_VERSION: 15
       BUILD_TYPE: nts-Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
@@ -113,7 +103,7 @@ deploy:
   description: 'v$(appveyor_build_version)'
   provider: GitHub
   auth_token:
-    secure: <your encrypted token>
+    secure: QALEjMFXbGQQ2tgDR4YKrEOT5L7lvgjrSnnsbXa3A7KR/Mk1GjJDLNrkWgB0pyW2
   artifact: '$(RELEASE_ZIPBALL).zip'
   draft: false
   prerelease: true
