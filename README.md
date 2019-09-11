@@ -27,7 +27,18 @@ This is an experimental PHP extension. Think twice before using it in production
 
 ## Installation
 
-    pecl install write_protection-alpha
+    git clone https://github.com/improved-php-library/write-protection.git
+
+    phpize
+    ./configure
+    make
+    make test
+    make install
+
+Add the following line to your `php.ini`
+
+    extension=skeleton.so
+
 
 ## Examples
 
