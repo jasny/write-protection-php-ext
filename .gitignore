@@ -28,6 +28,7 @@ modules/
 *.lo
 php_test_results_*.txt
 tests/*
+!tests/smoke.php
 !tests/*.phpt
 *~
 configure.ac

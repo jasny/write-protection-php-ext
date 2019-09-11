@@ -1,5 +1,5 @@
 env:
-  EXTNAME: skeleton
+  EXTNAME: write_protection
 
 language: php
 php:

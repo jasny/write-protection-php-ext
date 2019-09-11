@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
-project(skeleton C)
+project(write_protection C)
 
-add_compile_definitions(HAVE_SKELETON)
+add_compile_definitions(HAVE_WRITE_PROTECTION)
 
-set(SOURCE_FILES php_skeleton skeleton.c)
+set(SOURCE_FILES php_write_protection write_protection.c)
 
 execute_process (
         COMMAND php-config --include-dir

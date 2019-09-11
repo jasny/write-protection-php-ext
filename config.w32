@@ -1,10 +1,10 @@
 // $Id$
 // vim:ft=javascript
 
-ARG_ENABLE("skeleton", "enable skeleton", "no");
+ARG_ENABLE("write_protection", "enable write_protection", "no");
 
-if (PHP_SKELETON != "no") {
-	EXTENSION("skeleton", "skeleton.c");
-	AC_DEFINE('HAVE_SKELETON', 1 , 'whether skeleton is enabled');
-	PHP_INSTALL_HEADERS("ext/skeleton/", "php_skeleton.h");
+if (PHP_WRITE_PROTECTION != "no") {
+	EXTENSION("write_protection", "write_protection.c");
+	AC_DEFINE('HAVE_WRITE_PROTECTION', 1 , 'whether write_protection is enabled');
+	PHP_INSTALL_HEADERS("ext/write_protection/", "php_skeleton.h");
 }

@@ -28,24 +28,23 @@
   +----------------------------------------------------------------------+
 */
 
-#ifndef PHP_SKELETON_H
-#define PHP_SKELETON_H 1
+#ifndef PHP_WRITE_PROTECTION_H
+#define PHP_WRITE_PROTECTION_H 1
 
-#define PHP_SKELETON_VERSION "0.0.1-dev"
-#define PHP_SKELETON_EXTNAME "skeleton"
+#define PHP_WRITE_PROTECTION_VERSION "0.1.0"
+#define PHP_WRITE_PROTECTION_EXTNAME "write_protection"
 
 #ifdef PHP_WIN32
-# define PHP_SKELETON_API __declspec(dllexport)
+# define PHP_WRITE_PROTECTION_API __declspec(dllexport)
 #elif defined(__GNUC__) && __GNUC__ >= 4
-# define PHP_SKELETON_API __attribute__ ((visibility("default")))
+# define PHP_WRITE_PROTECTION_API __attribute__ ((visibility("default")))
 #else
-# define PHP_SKELETON_API
+# define PHP_WRITE_PROTECTION_API
 #endif
 
-/* Declare all functions and classes of the extension */
-static PHP_FUNCTION(skeleton_nop);
+static PHP_MINIT_FUNCTION(write_protection);
 
-extern zend_module_entry skeleton_module_entry;
+extern zend_module_entry write_protection_module_entry;
 
 #endif
 

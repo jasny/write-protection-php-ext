@@ -7,7 +7,7 @@ branches:
   - w32
 
 environment:
-  EXTNAME: skeleton
+  EXTNAME: write_protection
 
   matrix:
     - PHP_VERSION: 7.2
