@@ -37,7 +37,7 @@ This is an experimental PHP extension. Think twice before using it in production
 
 Add the following line to your `php.ini`
 
-    extension=skeleton.so
+    extension=write_protection.so
 
 
 ## Examples
